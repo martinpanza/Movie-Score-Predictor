@@ -32,6 +32,10 @@ ratings  <- merge(ratings[,c(2,3)],movie_metadata[,c(13,29)],by.x = "movieId",by
 # Filtro Columnas Movies_Metadata
 movies_metadata_toSave <- movies[,c(1,16,27,29,3,14,6,15,11,19,8,21,23,24,20)]
 
+#Eliminar Repetidos
+movies_metadata_toSave <- movies_metadata_toSave[!duplicated(movies_metadata_toSave[,1]),]
+
+
 #------------- Guardar -----------------------
 
 write.csv(movies_metadata_toSave, file = "movies.csv", row.names = FALSE)
