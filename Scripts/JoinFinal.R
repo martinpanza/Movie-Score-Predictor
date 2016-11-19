@@ -1,9 +1,6 @@
 # Archivo ojala final de datos.
 
 library(reshape2)
-movies_final <- 1
-
-
 categorias <- data.frame(definitivocsvpagerank_500actores[,c(1,12:35)])
 actores <- data.frame(definitivocsvpagerank_500actores[,c(1,36:535)])
 duracion <- movies[,c(1,10)]
@@ -25,4 +22,5 @@ write.csv(movies_final[,c(3:527)], file = "movies_final_sin_duracion.csv", row.n
 
 #Escribir notas IMDB
 write.csv(notas_aproximadas_imbd[,c(2)], file = "imbd.csv", row.names = FALSE)
-
+#Escribir notas Movielens 1-5
+write.csv(notas_aproximadas_movielens[,c(2)], file = "movielens.csv", row.names = FALSE)
