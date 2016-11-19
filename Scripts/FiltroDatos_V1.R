@@ -35,11 +35,13 @@ movies_metadata_toSave <- movies[,c(1,16,27,29,3,14,6,15,11,19,8,21,23,24,20)]
 #Eliminar Repetidos
 movies_metadata_toSave <- movies_metadata_toSave[!duplicated(movies_metadata_toSave[,1]),]
 
+#Filtrar Directores con menos de 2 peliculas
 director_filter <- aggregate(movies, by=list(movies$director_name), FUN=length)
 director_filter <- director_filter[, c(1,2)]
 colnames(director_filter) = c("director_name","movies_quantity")
 director_filter <- director_filter[director_filter$movies_quantity > 1,]
 movies[(!movies$director_name %in% director_filter$director_name), 6] <- ""
+
 #------------- Guardar -----------------------
 
 write.csv(movies_metadata_toSave, file = "movies.csv", row.names = FALSE)
