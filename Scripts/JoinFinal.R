@@ -20,6 +20,8 @@ movies_final <- merge(movies_final,actores,by="movieId")
 
 # Escribir movies_final
 write.csv(movies_final[,c(2:527)], file = "movies_final.csv", row.names = FALSE)
+# Escribir movies_final sin la fecha.
+write.csv(movies_final[,c(3:527)], file = "movies_final_sin_duracion.csv", row.names = FALSE)
 
 #Escribir notas IMDB
 write.csv(notas_aproximadas_imbd[,c(2)], file = "imbd.csv", row.names = FALSE)
