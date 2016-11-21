@@ -7,7 +7,6 @@ directores <- data.frame(definitivocsveigan_500actores500directores[,c(1,536:104
 duracion <- movies[,c(1,10)]
 notas_aproximadas_imbd <- movies[,c(1,18)]
 notas_aproximadas_movielens <- movies[,c(1,19)]
-notas_aproximadas_movielens_norm <- movies[,c(1,20)]
 
 # Formato : movie_id + rating + duracion + genero + actores.
 

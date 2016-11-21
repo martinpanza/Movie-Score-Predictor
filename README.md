@@ -8,6 +8,10 @@ Actualmente en proceso de creacion.
 
 ## Clasificadores logrados
 
-Actualmente logramos hacer funcionar KMM y SVM.  
+Actualmente logramos hacer funcionar KMM , SVM y Random Forest Tree
+
+## Logros logrados O.o
+
+Accuracy entre el 50-62%
 
 :)
