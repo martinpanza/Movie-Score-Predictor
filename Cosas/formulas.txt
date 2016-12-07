@@ -1,2 +1,0 @@
-=SI(ESNUMERO(HALLAR($O$1:$AL$1;$N3));1;0) -> para rellenar con 1 y 0 si es que un string está dentro de otro
-=($E2&"|"&$F2) -> para concatenar 2 celdas usando un | entre medio
