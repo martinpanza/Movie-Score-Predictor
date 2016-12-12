@@ -19,7 +19,7 @@ Esta información podría serles útil a las productoras de películas que tienen qu
 
 #### Problema a resolver
 
-Por lo que el gran problema que debemos resolver es cómo utilizar una gran cantidad de metadatos de peliculas (entre los que se encuentran los actores principales, director, género, etc) para así predecir la calificación o score que los usuarios le darían a alguna película que esté por estrenar. Es decir, utilizando meta-datos conocidos de películas anteriores se asociarán las calificaciones de alguna manera a sus participantes y de esta forma al probar con diferentes combinaciones para películas nuevas, obtener diferentes notas y así elegir la mejor.
+El gran problema que debemos resolver entonces, es cómo utilizar una gran cantidad de metadatos de peliculas (entre los que se encuentran los actores principales, director, género, etc) para así predecir la calificación o score que los usuarios le darían a alguna película que vaya a ser estrenada. Es decir, utilizando meta-datos conocidos de películas anteriores se asociarán las calificaciones de alguna manera a sus participantes y de esta forma al probar con diferentes combinaciones para películas nuevas, obtener diferentes notas y así elegir la mejor.
 
 
 ###Descripción de los datos
@@ -100,15 +100,15 @@ de las películas en el dataset, por lo que se realizó una agrupación por cada
 evaluación diferente y se graficó la cantidad de películas para cada una de ellas
 utilizando barras. La distribución se comporta como uno esperaría que lo hiciera, aproximándose a una normal.
 
-#### Score vs Duracion.
+#### Score vs Duracion
 ![Scores vs Duracion](Graficos/PeliculaDuracion.png  "Distribución de los ranking/scores de las peliculas según su duración")
 Se puede ver en este grafico que tanto las películas que tienen una duracion mayor que 130 minutos tienden a tener notas sobre 5.5 mientras que las que duran menos de 80 minutos (probablemente cortos) tienden a tener notas superiores a 6.5. Por otro lado, el intervalo entre 80 y 130 minutos no otorga información concluyente por si mismo, ya que es ahi donde se encuentra una gran cantidad de películas con todo tipo de score. 
 
-#### Score vs genero de la película. 
+#### Score vs genero de la película
 ![Score vs Categoria](Graficos/RatingCategoria.png "Densidad de los ratings/scores de las películas según su género")
 Se puede ver en este grafico que cada categoría de peliculas tiende a tener una función de distribucion normal, cada una centrada en un promedio distinto. Sobre esta base, podemos suponer que ciertos tipos de categorías determinaran en alguna medida los scores de las películas a las que pertenescan. En este caso tenemos por ejemplo que las peliculas de drama por lo general tienden a tener una mejor evaluacion por parte de los usuarios con respecto a otras películas de distintas categorías.
 
-#### Score vs actores.
+#### Score vs actores
 ![Score vs Actores](Graficos/RatingsActor.png "Algunos ejemplos de la densidad de los ratings/scores de las pelicuas según su/sus actores")
 Tal como vimos en el gráfico anterior, tambien se puede inferir que existe una relación entre el actor que esta presente en la película y su score. Esto se puede ver por ejemplo con actores como Brad Pitt que tiene la mayoría de sus películas más o menos bien distribuidas en el intervalo 8-9 mientras que "La Roca" tiene practicamente todas sus películas en el 6.
 
@@ -153,7 +153,7 @@ películas. Finalmente, se dejaron aproximadamente 500 actores y 500 directores
 que corresponden a los más "influyentes" (esto se traduce a que tuvieron más
 participaciones) y se usó el método de Eigan para el grafo.
 
-### Exploración de datos (es necesario que se llame así esta parte? ya hicimos exploración, entonces podría llamarse "procesamiento de datos" o algo así)
+### Procesamiento de Datos
 
 #### Pre-Procesamiento (Prueba Preliminar)
 
@@ -183,8 +183,10 @@ anterior. Este trabajo tomó mucho tiempo y concentró muchos de los esfuerzos del
 
 ### Resultados
 
+#### Preliminares
 En la prueba preliminar, el clasificador que obtuvo mejores resultados fue Support Vector Machine, obteniendo un Accuracy de 0.61. Este resultado no se considera aceptable de acuerdo al objetivo, por lo que se propuso mejorar el clasificador para obtener mejores resultados. También se concluyó en esta prueba que el clasificador falla en algunos casos de películas con pocos datos de respaldo, como por ejemplo "Justin Bieber: Never Say Never", en la que erró por mucho la nota.
 
+#### Finales
 En la prueba final, luego de corregir los errores de la prueba preliminar, se obtuvieron mejores resultados. 
 
 
